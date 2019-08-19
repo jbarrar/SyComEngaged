@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37119DCE-3FBF-4E8F-8F27-8AEF30474AFE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SyComEngaged</RootNamespace>
+    <AssemblyName>SyComEngaged</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.GraphClient">
+      <HintPath>packages\Microsoft.Azure.ActiveDirectory.GraphClient.2.1.0\lib\portable-net4+sl5+win+wpa+wp8\Microsoft.Azure.ActiveDirectory.GraphClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.2.21.301221612\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms">
+      <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.2.21.301221612\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Presets, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxGauges.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Web, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Web, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterSuccess.aspx" />
+    <Content Include="admin\Feedback.aspx" />
+    <Content Include="Content\ajax\feedback.aspx" />
+    <Content Include="Content\ajax\ViewNomination.aspx" />
+    <Content Include="Content\colorbox.css" />
+    <Content Include="Content\Images\AquaHeader.jpg" />
+    <Content Include="Content\Images\BlackGlassHeader.jpg" />
+    <Content Include="Content\Images\GlassHeader.jpg" />
+    <Content Include="Content\Images\icons\nominations\coffee.JPG" />
+    <Content Include="Content\Images\icons\nominations\growthchart.JPG" />
+    <Content Include="Content\Images\icons\nominations\heart.jpg" />
+    <Content Include="Content\Images\icons\nominations\shield.JPG" />
+    <Content Include="Content\Images\icons\nominations\smiley.JPG" />
+    <Content Include="Content\Images\icons\nominations\stopwatch.JPG" />
+    <Content Include="Content\Images\icons\nominations\team.JPG" />
+    <Content Include="Content\Images\icons\nominations\ThumbsUp.JPG" />
+    <Content Include="Content\Images\sycom\employees\icons\AaronMargeson.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\AaronStorey.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\AdamCostello.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\AllenHartman.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\AllenJenkins.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\AllenSurface.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\AmandaBrown.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\AndyClements.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\BenJenkins.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\BillSutton.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\BillyHerrald.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\BrendaJackson.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\BrennanMills.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\CarolCoggsdale.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ChipBlanks.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ChrisGreen.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ChrisHarirchian.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ChrisMann.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ChrisOswalt.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ChrisTimberlake.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\CindyBowers.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\DannyBowen.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\DarrenManners.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\DaveCaston.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\DavidDSurney.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\DeniseDrinkard.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\DioneHouston.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\DustinTaboada.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\FaithBasker.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\FrankHeishman.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\GilHalasz.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\GoldieCurry.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\GregCarl.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JacobVanEeden.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JamesVaughan.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JeffFox.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JeffMauro.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JoAnnaLaramore.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JoeColon.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JohnBillups.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JohnElliott.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JohnJewsbury.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JohnSchmol.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JonathanFox.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JonathanFreed.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\JoshKrodel.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\KathyBeard.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\KatieBailey.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\KayleMiller.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\KimCornwell.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\KurtHaas.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\LeeStallman.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MarieJones.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MartaGay.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MaryPearce.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MattScott.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MichaelBlackburn.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MichaelCouture.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MichaelMolla.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MicheleLempke.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MickeyElliott.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MikeCanalini.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MikeFisher.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MikeHealy.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MikeHume.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\MikeONeil.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\NathanHochstrasser.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\PatrickMiller.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\PatrickStevens.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ReneeSymons.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\RobertGolmon.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\RobertTimmons.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\RobinHeinberg.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\RobSpitzer.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SarahVirgin.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ScottStrickland.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SeanBaucum.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ShannonWyatt.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SherwoodDunn.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\StephenBernard.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SteveBernard.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SteveEnglish.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SteveHarris.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SteveHertel.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\SusanBreckenridge.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\ToddRamer.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\TomBall.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\TomCarr.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\TomCricchi.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\TomRichbourg.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\TravisBrooks.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\TurnerTillman.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\TwannAtkins.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\unknown.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\unknown.png" />
+    <Content Include="Content\Images\sycom\employees\icons\VictoriaCrute.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\VivianMorgan.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\WendyBasham.jpg" />
+    <Content Include="Content\Images\sycom\employees\icons\WhitneyFulton.jpg" />
+    <Content Include="Content\Images\sycom\Sycom-connected-logo.png" />
+    <Content Include="Content\Images\sycom\Sycom-equals-logo.png" />
+    <Content Include="Content\Images\sycom\sycom-header-bg.png" />
+    <Content Include="Content\Images\PlasticBlueHeader.jpg" />
+    <Content Include="Content\Images\RedWineHeader.jpg" />
+    <Content Include="Content\scripts\jquery-2.2.0.min.js" />
+    <Content Include="Content\scripts\jquery.colorbox-min.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Directory\default.aspx" />
+    <Content Include="Directory\Profile.aspx" />
+    <Content Include="EditNomination.aspx" />
+    <Content Include="EmailTest.aspx" />
+    <Content Include="Games\default.aspx" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Leaderboards.aspx" />
+    <Content Include="Light.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Nominate.aspx" />
+    <Content Include="Nominations.aspx" />
+    <Content Include="Root.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Stats\default.aspx" />
+    <Content Include="TownHall\default.aspx" />
+    <Content Include="TownHall\Questions.aspx" />
+    <Content Include="ViewNomination.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Azure - Engaged.pubxml" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Engaged - Azure.pubxml" />
+    <None Include="Properties\PublishProfiles\SyCom Engaged - Azure.pubxml" />
+    <Content Include="Upload\SyComEngaged.zip" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterSuccess.aspx.cs">
+      <DependentUpon>RegisterSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterSuccess.aspx.designer.cs">
+      <DependentUpon>RegisterSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\EngMail.cs" />
+    <Compile Include="App_Code\Eng_Data.cs" />
+    <Compile Include="Content\ajax\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\ajax\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ajax\ViewNomination.aspx.cs">
+      <DependentUpon>ViewNomination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\ajax\ViewNomination.aspx.designer.cs">
+      <DependentUpon>ViewNomination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditNomination.aspx.cs">
+      <DependentUpon>EditNomination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditNomination.aspx.designer.cs">
+      <DependentUpon>EditNomination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTest.aspx.cs">
+      <DependentUpon>EmailTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailTest.aspx.designer.cs">
+      <DependentUpon>EmailTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Games\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Games\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Leaderboards.aspx.cs">
+      <DependentUpon>Leaderboards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leaderboards.aspx.designer.cs">
+      <DependentUpon>Leaderboards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Light.master.cs">
+      <DependentUpon>Light.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Light.master.designer.cs">
+      <DependentUpon>Light.master</DependentUpon>
+    </Compile>
+    <Compile Include="Main.master.cs">
+      <DependentUpon>Main.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.master.designer.cs">
+      <DependentUpon>Main.master</DependentUpon>
+    </Compile>
+    <Compile Include="Nominate.aspx.cs">
+      <DependentUpon>Nominate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nominate.aspx.designer.cs">
+      <DependentUpon>Nominate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nominations.aspx.cs">
+      <DependentUpon>Nominations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nominations.aspx.designer.cs">
+      <DependentUpon>Nominations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Root.master.cs">
+      <DependentUpon>Root.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root.master.designer.cs">
+      <DependentUpon>Root.master</DependentUpon>
+    </Compile>
+    <Compile Include="Stats\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stats\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TownHall\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TownHall\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TownHall\Questions.aspx.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TownHall\Questions.aspx.designer.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewNomination.aspx.cs">
+      <DependentUpon>ViewNomination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewNomination.aspx.designer.cs">
+      <DependentUpon>ViewNomination.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58000</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
