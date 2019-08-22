@@ -358,6 +358,7 @@
     <Content Include="Content\Images\sycom\sycom-header-bg.png" />
     <Content Include="Content\Images\PlasticBlueHeader.jpg" />
     <Content Include="Content\Images\RedWineHeader.jpg" />
+    <Content Include="Content\Images\sycom\SyComAdvantage.png" />
     <Content Include="Content\jquery.growl.css" />
     <Content Include="Content\scripts\jquery-2.2.0.min.js" />
     <Content Include="Content\scripts\jquery.colorbox-min.js" />

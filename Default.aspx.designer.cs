@@ -13,24 +13,6 @@ namespace SyComEngaged {
     public partial class _Default {
         
         /// <summary>
-        /// aspxpanel_top control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel aspxpanel_top;
-        
-        /// <summary>
-        /// welcome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl welcome;
-        
-        /// <summary>
         /// dsNominees control.
         /// </summary>
         /// <remarks>
